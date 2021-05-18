@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="scss/custom.css">
+  <title>Company Profile</title>
+</head>
+<body>
+  <div id="app">
+
+    <div id="navigation" class="fixed-top">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+          <a class="navbar-brand mb-2 mb-lg-0" href="#">
+            <img src="img/logo.png" height="30" alt="mdb logo">
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+            aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="basicExampleNav">
+            <ul class="navbar-nav mx-lg-auto">
+              <li class="nav-item" v-for="n in nav">
+                <a :class="['nav-link', n.class]" href="#">
+                  <i :class="['fas', n.icon]"></i> {{n.name}}
+                </a>
+              </li>
+            </ul>
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <button type="button" class="btn btn-sm btn-warning font-weight-bold">
+                  <i class="fas fa-sign-in-alt animated zoomIn infinite"></i> Join us
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <div id="hero">
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container container-relative">
+          <div class="konten text-white text-center konten-margin">
+            <div class="row justify-content-center">
+              <div class="col-12 col-lg-8">
+                <div class="teks">
+                  <p class="h3 font-weight-light animated fadeInDownBig">Welcome to,</p>
+                  <p class="h1 font-weight-bold text-warning animated fadeInDownBig delay-1s">{{hero.companyname}}</p>
+                  <p class="h6 font-weight-light animated animated fadeInUpBig delay-2s">{{hero.companymotto}}</p>
+                </div>
+                <div class="tmbl mt-4">
+                  <button type="button" class="btn btn-warning font-weight-bold animated zoomInDown delay-2s"><i class="fab fa-readme"></i> Read Faqs</button>
+                  <button type="button" class="btn btn-white waves-effect font-weight-bold animated zoomInUp delay-2s"><i class="fas fa-hand-pointer"></i> Get Started</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="story" class="mt-5 mb-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-lg-6 mr-auto">
+            <div class="teks">
+              <p class="h6 text-muted">All About Us</p>
+              <p class="h3 font-weight-bold mb-3">OUR STORY</p>
+              <p class="h6 text-muted">{{story}}</p>
+            </div>
+            <div class="ikon mt-4">
+              <div class="row">
+                <div class="col-6 col-lg-4 col-xl-3 mb-4" v-for="s in storyIcon">
+                  <div class="ikon-list shadow-sm border border-light text-center rounded px-1 py-3">
+                    <i :class="['fas fa-2x', s.class]"></i>
+                    <p class="small font-weight-bold mb-0 mt-1">{{s.title}}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-5">
+            <div class="form-head text-white bg-warning p-4">
+              <div class="row align-items-center">
+                <div class="col-2">
+                  <i class="fab fa-quora fa-3x"></i>
+                </div>
+                <div class="col">
+                  <p class="h4 font-weight-bold mb-3">Request A Quotes</p>
+                  <p class="h6 mb-0">Request our mailing list. We write rarely, but only the best services.</p>
+                </div>
+              </div>
+            </div>
+            <form class="text-center rounded shadow-sm border border-light p-5" action="#!">
+              <div class="md-form" v-for="s in storyForm">
+                <input :type="s.type" :id="s.id" class="form-control">
+                <label :for="s.id">{{s.label}}</label>
+              </div>
+              <button class="btn btn-dark btn-block font-weight-bold" type="submit">REQUEST</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="services" class="bg-services mb-5">
+      <div class="container-fluid">
+        <div class="row justify-content-center pt-5 pb-4">
+          <div class="col-12 col-lg-6">
+            <div class="desc-services">
+              <p class="h6  text-center text-muted">What We Can Do ?</p>
+              <p class="h3 font-weight-bold text-center">OUR SERVICES</p>
+              <p class="h6 text-center text-muted">{{services}}</p>
+            </div>
+          </div>
+        </div>
+        <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link text-center active" id="design-tab" data-toggle="tab" href="#design" role="tab" aria-controls="design"
+              aria-selected="true">
+              <p><i class="fas fa-pencil-ruler fa-2x"></i></p>
+              <p>DESIGN & BUILD</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-center" id="tiling-tab" data-toggle="tab" href="#tiling" role="tab" aria-controls="tiling"
+              aria-selected="false">
+              <p><i class="fas fa-paint-roller fa-2x"></i></p>
+              <p>TILING & PAINTINGS</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-center" id="wood-tab" data-toggle="tab" href="#wood" role="tab" aria-controls="wood"
+              aria-selected="false">
+              <p><i class="fas fa-clone fa-2x"></i></p>
+              <p>WOOD FLOORING</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-center" id="renov-tab" data-toggle="tab" href="#renov" role="tab" aria-controls="renov"
+              aria-selected="false">
+              <p><i class="fas fa-house-damage fa-2x"></i></p>
+              <p>RENOVATION</p>
+            </a>
+          </li>
+        </ul>
+        <div class="tab-content text-white mt-3" id="myTabContent">
+          <div class="tab-pane fade show active" id="design" role="tabpanel" aria-labelledby="design-tab">
+            <div class="row">
+              <div class="col-12 col-xl-6 px-0">
+                <div class="img-batas">
+                  <img :src="designTab.img" class="img-fluid img-filter w-100" alt="Responsive image">
+                  <div class="number p-5">
+                    <h1 class="display-4 font-weight-bold text-warning">{{designTab.number}}</h1>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-xl-6 px-0">
+                <div class="bg-warning h-100 p-5">
+                  <p class="h3 font-weight-bold mb-lg-5">{{designTab.title}}</p>
+                  <p class="h6">{{designTab.descA}}</p>
+                  <p class="h6 mb-lg-5">{{designTab.descB}}</p>
+                  <p><button type="button" class="btn btn-dark font-weight-bold">Read More</button></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="tiling" role="tabpanel" aria-labelledby="tiling-tab">
+            <div class="row">
+              <div class="col-12 col-xl-6 px-0">
+                <div class="img-batas">
+                  <img :src="tileTab.img" class="img-fluid img-filter w-100" alt="Responsive image">
+                  <div class="number p-5">
+                    <h1 class="display-4 font-weight-bold text-warning">{{tileTab.number}}</h1>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-xl-6 px-0">
+                <div class="bg-warning h-100 p-5">
+                  <p class="h3 font-weight-bold mb-lg-5">{{tileTab.title}}</p>
+                  <p class="h6">{{tileTab.descA}}</p>
+                  <p class="h6 mb-lg-5">{{tileTab.descB}}</p>
+                  <p><button type="button" class="btn btn-dark font-weight-bold">Read More</button></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="wood" role="tabpanel" aria-labelledby="wood-tab">
+            <div class="row">
+              <div class="col-12 col-xl-6 px-0">
+                <div class="img-batas">
+                  <img :src="woodTab.img" class="img-fluid img-filter w-100" alt="Responsive image">
+                  <div class="number p-5">
+                    <h1 class="display-4 font-weight-bold text-warning">{{woodTab.number}}</h1>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-xl-6 px-0">
+                <div class="bg-warning h-100 p-5">
+                  <p class="h3 font-weight-bold mb-lg-5">{{woodTab.title}}</p>
+                  <p class="h6">{{woodTab.descA}}</p>
+                  <p class="h6 mb-lg-5">{{woodTab.descB}}</p>
+                  <p><button type="button" class="btn btn-dark font-weight-bold">Read More</button></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="renov" role="tabpanel" aria-labelledby="renov-tab">
+            <div class="row">
+              <div class="col-12 col-xl-6 px-0">
+                <div class="img-batas">
+                  <img :src="renovTab.img" class="img-fluid img-filter w-100" alt="Responsive image">
+                  <div class="number p-5">
+                    <h1 class="display-4 font-weight-bold text-warning">{{renovTab.number}}</h1>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-xl-6 px-0">
+                <div class="bg-warning h-100 p-5">
+                  <p class="h3 font-weight-bold mb-lg-5">{{renovTab.title}}</p>
+                  <p class="h6">{{renovTab.descA}}</p>
+                  <p class="h6 mb-lg-5">{{renovTab.descB}}</p>
+                  <p><button type="button" class="btn btn-dark font-weight-bold">Read More</button></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="projects" class="mb-5">
+      <div class="container">
+        <div class="row justify-content-center pt-5 pb-2">
+          <div class="col-12 col-lg-6">
+            <div class="desc-projects">
+              <p class="h6  text-center text-muted">Great & Awesome Works</p>
+              <p class="h3 font-weight-bold text-center">OUR PROJECTS</p>
+            </div>
+          </div>
+        </div>
+        <ul class="nav nav-tabs justify-content-center" id="myTab2" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" id="interior-tab" data-toggle="tab" href="#interior" role="tab" aria-controls="interior"
+              aria-selected="true">INTERIOR</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="renovation-tab" data-toggle="tab" href="#renovation" role="tab" aria-controls="renovation"
+              aria-selected="false">RENOVATION</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="architect-tab" data-toggle="tab" href="#architect" role="tab" aria-controls="architect"
+              aria-selected="false">ARCHITECTURE</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="landscape-tab" data-toggle="tab" href="#landscape" role="tab" aria-controls="landscape"
+              aria-selected="false">LANDSCAPING</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="garden-tab" data-toggle="tab" href="#garden" role="tab" aria-controls="garden"
+              aria-selected="false">GARDENING</a>
+          </li>
+        </ul>
+        <div class="tab-content mt-4" id="myTabContent">
+          <div class="tab-pane fade show active" id="interior" role="tabpanel" aria-labelledby="interior-tab">
+            <div class="row">
+              <div class="col-12 col-md-6 col-lg-4" v-for="i in interiorTab" :key="i.id">
+                <div class="view overlay zoom mb-2">
+                  <div class="bungkus">
+                    <a :href="i.img" data-lightbox="interior" :data-title="i.title">
+                      <img :src="i.img" class="img-fluid " alt="zoom">
+                      <div class="mask pattern-6 flex-center waves-effect waves-light rgba-orange-strong">
+                        <p class="white-text">
+                          <i class="fas fa-eye fa-2x"></i>
+                        </p>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <p class="small">{{i.title}}</p>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="renovation" role="tabpanel" aria-labelledby="renovation-tab">
+            <div class="row">
+              <div class="col-12 col-md-6 col-lg-4" v-for="r in renovationTab" :key="r.id">
+                <div class="view overlay zoom mb-2">
+                  <div class="bungkus">
+                    <a :href="r.img" data-lightbox="renovation" :data-title="r.title">
+                      <img :src="r.img" class="img-fluid " alt="zoom">
+                      <div class="mask pattern-6 flex-center waves-effect waves-light rgba-orange-strong">
+                        <p class="white-text">
+                          <i class="fas fa-eye fa-2x"></i>
+                        </p>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <p class="small">{{r.title}}</p>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="architect" role="tabpanel" aria-labelledby="architect-tab">
+            <div class="row">
+              <div class="col-12 col-md-6 col-lg-4" v-for="a in acrhitectureTab" :key="a.id">
+                <div class="view overlay zoom mb-2">
+                  <div class="bungkus">
+                    <a :href="a.img" data-lightbox="architecture" :data-title="a.title">
+                      <img :src="a.img" class="img-fluid " alt="zoom">
+                      <div class="mask pattern-6 flex-center waves-effect waves-light rgba-orange-strong">
+                        <p class="white-text">
+                          <i class="fas fa-eye fa-2x"></i>
+                        </p>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <p class="small">{{a.title}}</p>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="landscape" role="tabpanel" aria-labelledby="landscape-tab">
+            <div class="row">
+              <div class="col-12 col-md-6 col-lg-4" v-for="l in landscapingTab" :key="l.id">
+                <div class="view overlay zoom mb-2">
+                  <div class="bungkus">
+                    <a :href="l.img" data-lightbox="landscape" :data-title="l.title">
+                      <img :src="l.img" class="img-fluid " alt="zoom">
+                      <div class="mask pattern-6 flex-center waves-effect waves-light rgba-orange-strong">
+                        <p class="white-text">
+                          <i class="fas fa-eye fa-2x"></i>
+                        </p>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <p class="small">{{l.title}}</p>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="garden" role="tabpanel" aria-labelledby="garden-tab">
+            <div class="row">
+              <div class="col-12 col-md-6 col-lg-4" v-for="g in gardenTab" :key="g.id">
+                <div class="view overlay zoom mb-2">
+                  <div class="bungkus">
+                    <a :href="g.img" data-lightbox="garden" :data-title="g.title">
+                      <img :src="g.img" class="img-fluid " alt="zoom">
+                      <div class="mask pattern-6 flex-center waves-effect waves-light rgba-orange-strong">
+                        <p class="white-text">
+                          <i class="fas fa-eye fa-2x"></i>
+                        </p>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <p class="small">{{g.title}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="testimonial" class="bg-services py-5 mb-5">
+      <div class="container">
+        <div class="row justify-content-center pb-2">
+          <div class="col-12 col-lg-6">
+            <div class="desc-testi">
+              <p class="h6  text-center text-muted">What People Say ?</p>
+              <p class="h3 font-weight-bold text-center">TESTIMONIALS</p>
+            </div>
+          </div>
+        </div>
+        <div id="owl-1" class="owl-carousel owl-theme">
+          <div class="item" v-for="t in testimonial" :key="t.id">
+            <div class="row justify-content-center">
+              <div class="col-12 col-lg-7">
+                <div class="card shadow-sm p-4 mb-3">
+                  <div class="card-body">
+                    <img :src="t.img" alt="thumbnail" class="img-thumbnail d-block mx-auto mb-4" style="width: 7rem;">
+                    <p class="card-text font-italic text-center">{{t.commen}}</p>
+                  </div>
+                </div>
+                <p class="small px-2 text-center"><span class="font-weight-bold">{{t.name}},</span> <span class="text-muted">{{t.job}}</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="client">
+      <div class="container">
+        <div class="row justify-content-center pt-5 pb-2">
+          <div class="col-12 col-lg-6">
+            <div class="desc-client">
+              <p class="h6  text-center text-muted">They Always Trust Us</p>
+              <p class="h3 font-weight-bold text-center">OUR CLIENTS</p>
+            </div>
+          </div>
+        </div>
+        <div id="owl-2" class="owl-carousel owl-theme mt-4">
+          <div class="item" v-for="c in clients">
+            <div class="text-center icon-hover">
+              <i :class="c.icon"></i>
+            </div>
+          </div>
+      </div>
+      </div>
+    </div>
+
+    <div id="baner" class="jarak-atas mb-5">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 col-lg-8">
+            <div class="card text-white">
+              <div class="card-body bg-warning">
+                <div class="row align-items-center">
+                  <div class="col-12 col-lg-8 mb-2 mb-lg-0">
+                    <p class="small mb-2">Home Anytime ?</p>
+                    <p class="h6 font-weight-bold mb-lg-0">DON'T HESTIATE TO CONTACT US ANYTIME</p>
+                  </div>
+                  <div class="col-12 col-lg-4">
+                    <div class="text-lg-right">
+                      <button type="button" class="btn btn-sm btn-dark waves-effect m-0 font-weight-bold">CONTACT US</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-body bg-dark">
+                <div class="row align-items-center">
+                  <div class="col-12 col-lg-4 mb-4 mb-lg-0">
+                    <p class="h6 text-warning"><i class="fas fa-map"></i> Visit Us</p>
+                    <p class="small text-white-50 mb-0">Kukusan, Depok, Jawa Barat, Indonesia</p>
+                  </div>
+                  <div class="col-12 col-lg-4 mb-4 mb-lg-0">
+                    <p class="h6 text-warning"><i class="fas fa-envelope"></i> Email</p>
+                    <p class="small text-white-50 mb-0">YourCompany@email.com</p>
+                  </div>
+                  <div class="col-12 col-lg-4 mb-4 mb-lg-0">
+                    <p class="h6 text-warning"><i class="fas fa-phone"></i> Contact Us</p>
+                    <p class="small text-white-50 mb-0">+62 0123-456-789</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="footer" class="bg-dark pt-5">
+      <div class="container">
+        <div class="row justify-content-md-around">
+          <div class="col-12 col-lg-3">
+            <p class="h6 text-white font-weight-bold">About</p>
+            <p class="small text-white-50">
+              Ultimately, your company profile matters. It can intrigue a new visitor to check out your products or services in more detail, and nudge potential customers into choosing your business over competitors.
+            </p>
+          </div>
+          <div class="col-12 col-lg-2">
+            <p class="h6 text-white font-weight-bold">Categories</p>
+            <p class="mb-1"><a href="" class="small text-white-50">Agency</a></p>
+            <p class="mb-1"><a href="" class="small text-white-50">Business</a></p>
+            <p class="mb-1"><a href="" class="small text-white-50">Page Builder</a></p>
+            <p class="mb-1"><a href="" class="small text-white-50">Portfolio</a></p>
+          </div>
+          <div class="col-12 col-lg-2">
+            <p class="h6 text-white font-weight-bold">Navigation</p>
+            <p class="mb-1"><a href="" class="small text-white-50">Depok</a></p>
+            <p class="mb-1"><a href="" class="small text-white-50">Bogor</a></p>
+            <p class="mb-1"><a href="" class="small text-white-50">Bekasi</a></p>
+            <p class="mb-1"><a href="" class="small text-white-50">Jakarta</a></p>
+          </div>
+          <div class="col-12 col-lg-2">
+            <p class="h6 text-white font-weight-bold">Recent Post</p>
+            <p class="mb-1"><a href="" class="small text-white-50">A Creative Ambient</a></p>
+            <p class="mb-1"><a href="" class="small text-white-50">All Of The Light</a></p>
+            <p class="mb-1"><a href="" class="small text-white-50">How To Gain</a></p>
+            <p class="mb-1"><a href="" class="small text-white-50">Powerful Theme</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid px-lg-0 mt-4">
+        <div class="footer-bottom py-3">
+          <p class="small text-center text-white-50 mb-0">Slicing By <span class="text-white">Ilham W</span>, Mockup Inspirate By <span class="text-white">webdesigntips.win</span> - Themeforest in <span><a href="https://id.pinterest.com/pin/645985140281891995/" class="text-danger">Pinterset</a></span></p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+<script src="js/script.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
