@@ -61,28 +61,28 @@ var app = new Vue({
       ],
       services: 'If you want people to look at your services and find you credible, you must invest in web design for services pages to provide your audience with a positive experience. By looking at some web design examples for service pages, you’ll get inspiration for building an impactful service page.',
       designTab: {
-        img: 'https://raw.githubusercontent.com/ihmwhydn/company-profile/master/img/architecture3.jpg',
+        img: 'https://raw.githubusercontent.com/ihmwhydn/company-profile/master/img/construction3.jpg',
         number: '01',
         title: 'Design And Building',
         descA: 'While tile is primarily used for flooring, it can also be utilized for shower stalls, back splashes and outdoor rooms. We fully understand how important your home investment is, which is why we strive to do all we can to protect this investment through worthwhile upgrades. Our company is widely known as one of the very best contractors in the area.',
         descB: 'When it comes to interior house painting, our talented painting crew makes sure to involve you throughout the entirety of the project, from the moment you contact us to the passing of the full inspection. Our process is a rigid one, so as to ensure that each project is handled with the same amount of care and quality. Before starting, we will cover all of your belongings and make sure that nothing is in the way. All flooring will be covered as well. No matter the size of the project, it’s our job to make sure that your home is left as clean as it was when we first arrived. If any cracks or holes exist in the areas we’re painting, we fill these in. Once the work is completed, everything is moved back to where it was and floors are vacuumed before the final inspection takes place.'
       },
       tileTab: {
-        img: '../img/construction1.jpg',
+        img: 'https://raw.githubusercontent.com/ihmwhydn/company-profile/master/img/construction1.jpg',
         number: '02',
         title: 'Tiling And Painting',
         descA: 'First, I found this definition on mathforum.org and found it appropriate for the definition of the tiling method with paint.   “When you fit individual tiles together with no gaps or overlaps to fill a flat space like a ceiling, wall, or floor, you have a tiling. You can imagine that you can use a variety of shapes to do this.',
         descB: 'I like this definition because of the additional comment at the end that you can imagine that a variety of shapes can do this, because so many of my students have thought that tiles are square, mechanical and rigid.  They can be any size and any shape, and they snap together like tetris to complete a grid space (painting) of whatever size and shape you choose.'
       },
       woodTab: {
-        img: '../img/construction4.jpg',
+        img: 'https://raw.githubusercontent.com/ihmwhydn/company-profile/master/img/construction4.jpg',
         number: '03',
         title: 'Wood Flooring',
         descA: 'If you’re thinking of putting in wood floors, you can’t go wrong. All types of hardwood floors have unmatched natural beauty and go with any decor — modern, traditional, country, you name it. Hardwood flooring goes in any room, although kitchens and basements warrant special considerations.',
         descB: 'The enduring good looks of hardwood flooring come in many types and styles to fit different needs and budgets.'
       },
       renovTab: {
-        img: '../img/construction2.jpg',
+        img: 'https://raw.githubusercontent.com/ihmwhydn/company-profile/master/img/construction2.jpg',
         number: '04',
         title: 'Renovation',
         descA: 'Most builders focus on building new homes, so renovating is typically a part-time activity for such tradespeople. The processes and services required for renovations are quite specific and, once plans are signed off, building a new home is relatively predictable. Renovations usually require all of the sub-trades that are needed for the construction of a new building. During renovation projects, flexibility is often required from renovation companies to respond to unexpected issues that arise. Projects involving renovation require not just flexibility, but a plan that had been agreed upon by multiple parties. The planning process will involve feedback from financial investors of the project, and from the designer. Part of planning will also entail the collection of data for the completion of the project and then the project plan will be revised and given consent before continuing with renovations.',
