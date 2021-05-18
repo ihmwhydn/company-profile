@@ -61,7 +61,7 @@ var app = new Vue({
       ],
       services: 'If you want people to look at your services and find you credible, you must invest in web design for services pages to provide your audience with a positive experience. By looking at some web design examples for service pages, you’ll get inspiration for building an impactful service page.',
       designTab: {
-        img: '../img/construction3.jpg',
+        img: 'https://raw.githubusercontent.com/ihmwhydn/company-profile/master/img/architecture3.jpg',
         number: '01',
         title: 'Design And Building',
         descA: 'While tile is primarily used for flooring, it can also be utilized for shower stalls, back splashes and outdoor rooms. We fully understand how important your home investment is, which is why we strive to do all we can to protect this investment through worthwhile upgrades. Our company is widely known as one of the very best contractors in the area.',
