@@ -91,127 +91,127 @@ var app = new Vue({
       interiorTab: [
         {
           id: 1,
-          img: '../img/Interior1.jpg',
+          img: 'https://raw.githubusercontent.com/ihmwhydn/company-profile/master/img/interior1.jpg',
           title: 'Interior Description'
         },
         {
           id: 2,
-          img: '../img/Interior2.jpg',
+          img: 'https://raw.githubusercontent.com/ihmwhydn/company-profile/master/img/interior2.jpg',
           title: 'Interior Description'
         },
         {
           id: 3,
-          img: '../img/Interior3.jpg',
+          img: 'https://raw.githubusercontent.com/ihmwhydn/company-profile/master/img/interior3.jpg',
           title: 'Interior Description'
         }
       ],
       renovationTab: [
         {
           id: 1,
-          img: '../img/renovation1.jpg',
+          img: 'https://raw.githubusercontent.com/ihmwhydn/company-profile/master/img/renovation1.jpg',
           title: 'Renovation Description'
         },
         {
           id: 2,
-          img: '../img/renovation2.jpg',
+          img: 'https://raw.githubusercontent.com/ihmwhydn/company-profile/master/img/renovation2.jpg',
           title: 'Renovation Description'
         },
         {
           id: 3,
-          img: '../img/renovation3.jpg',
+          img: 'https://raw.githubusercontent.com/ihmwhydn/company-profile/master/img/renovation3.jpg',
           title: 'Renovation Description'
         }
       ],
       acrhitectureTab: [
         {
           id: 1,
-          img: '../img/architecture1.jpg',
+          img: 'https://raw.githubusercontent.com/ihmwhydn/company-profile/master/img/architecture1.jpg',
           title: 'Architecture Description'
         },
         {
           id: 2,
-          img: '../img/architecture2.jpg',
+          img: 'https://raw.githubusercontent.com/ihmwhydn/company-profile/master/img/architecture2.jpg',
           title: 'Architecture Description'
         },
         {
           id: 3,
-          img: '../img/architecture3.jpg',
+          img: 'https://raw.githubusercontent.com/ihmwhydn/company-profile/master/img/architecture3.jpg',
           title: 'Architecture Description'
         }
       ],
       landscapingTab: [
         {
           id: 1,
-          img: '../img/landscaping1.jpg',
+          img: 'https://raw.githubusercontent.com/ihmwhydn/company-profile/master/img/landscaping1.jpg',
           title: 'Landscaping Description'
         },
         {
           id: 2,
-          img: '../img/landscaping2.jpg',
+          img: 'https://raw.githubusercontent.com/ihmwhydn/company-profile/master/img/landscaping2.jpg',
           title: 'Landscaping Description'
         },
         {
           id: 3,
-          img: '../img/landscaping3.jpg',
+          img: 'https://raw.githubusercontent.com/ihmwhydn/company-profile/master/img/landscaping3.jpg',
           title: 'Landscaping Description'
         }
       ],
       gardenTab: [
         {
           id: 1,
-          img: '../img/garden1.jpg',
+          img: 'https://raw.githubusercontent.com/ihmwhydn/company-profile/master/img/garden1.jpg',
           title: 'Gardening Description'
         },
         {
           id: 2,
-          img: '../img/garden2.jpg',
+          img: 'https://raw.githubusercontent.com/ihmwhydn/company-profile/master/img/garden2.jpg',
           title: 'Gardening Description'
         },
         {
           id: 3,
-          img: '../img/garden3.jpg',
+          img: 'https://raw.githubusercontent.com/ihmwhydn/company-profile/master/img/garden3.jpg',
           title: 'Gardening Description'
         }
       ],
       testimonial: [
         {
           id: 1,
-          img: '../img/profil1.jpg',
+          img: 'https://raw.githubusercontent.com/ihmwhydn/company-profile/master/img/profil1.jpg',
           commen: 'I just wanted to share a quick note and let you know that you guys do a really good job. I’m glad I decided to work with you. It’s really great how easy your websites are to update and manage. I never have any problem at all',
           name: 'Client Name',
           job: 'Client Job'
         },
         {
           id: 2,
-          img: '../img/profil2.jpg',
+          img: 'https://raw.githubusercontent.com/ihmwhydn/company-profile/master/img/profil2.jpg',
           commen: 'I just wanted to share a quick note and let you know that you guys do a really good job. I’m glad I decided to work with you. It’s really great how easy your websites are to update and manage. I never have any problem at all',
           name: 'Client Name',
           job: 'Client Job'
         },
         {
           id: 3,
-          img: '../img/profil3.jpg',
+          img: 'https://raw.githubusercontent.com/ihmwhydn/company-profile/master/img/profil3.jpg',
           commen: 'I just wanted to share a quick note and let you know that you guys do a really good job. I’m glad I decided to work with you. It’s really great how easy your websites are to update and manage. I never have any problem at all',
           name: 'Client Name',
           job: 'Client Job'
         },
         {
           id: 4,
-          img: '../img/profil4.jpg',
+          img: 'https://raw.githubusercontent.com/ihmwhydn/company-profile/master/img/profil4.jpg',
           commen: 'I just wanted to share a quick note and let you know that you guys do a really good job. I’m glad I decided to work with you. It’s really great how easy your websites are to update and manage. I never have any problem at all',
           name: 'Client Name',
           job: 'Client Job'
         },
         {
           id: 5,
-          img: '../img/profil5.jpg',
+          img: 'https://raw.githubusercontent.com/ihmwhydn/company-profile/master/img/profil5.jpg',
           commen: 'I just wanted to share a quick note and let you know that you guys do a really good job. I’m glad I decided to work with you. It’s really great how easy your websites are to update and manage. I never have any problem at all',
           name: 'Client Name',
           job: 'Client Job'
         },
         {
           id: 6,
-          img: '../img/profil6.jpg',
+          img: 'https://raw.githubusercontent.com/ihmwhydn/company-profile/master/img/profil6.jpg',
           commen: 'I just wanted to share a quick note and let you know that you guys do a really good job. I’m glad I decided to work with you. It’s really great how easy your websites are to update and manage. I never have any problem at all',
           name: 'Client Name',
           job: 'Client Job'
